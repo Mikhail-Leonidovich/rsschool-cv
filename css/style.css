@@ -242,6 +242,28 @@ body {
   font-weight: 500;
 }
 
+.work__text {
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.work__item {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.work__link {
+  text-decoration: none;
+  color: #2d304b;
+}
+
+.work__link:hover {
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
 .code__text {
   text-align: justify;
   font-size: 18px;
@@ -254,19 +276,20 @@ body {
 }
 
 .education__item {
+  margin-bottom: 10px;
   text-align: justify;
   font-size: 18px;
   font-weight: 500;
 }
 
 .languages__item {
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 500;
 }
 
-.languages__span{
+.languages__span {
   font-weight: 700;
-  
 }
 
 /* ===============

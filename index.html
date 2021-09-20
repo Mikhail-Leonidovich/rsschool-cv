@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mikhail Yurkevich</title>
     <link rel="stylesheet" href="../rsschool-cv/css/style.css" />
+    <link rel="stylesheet" href="../rsschool-cv/css/burger-menu.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -14,9 +15,20 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/shades-of-purple.min.css"
+    />
   </head>
 
   <body>
+    <!-- Burger -->
+    <div class="burger-menu burger-menu--active">
+      <a href="" class="burger-menu__btn">
+        <span class="burger-menu__line"></span>
+      </a>
+    </div>
+    <!-- /Burger -->
     <!-- Header -->
     <header class="header">
       <div class="container">
@@ -59,94 +71,98 @@
               src="..//rsschool-cv/images/My_photo.png"
               alt="my_photo"
             />
-            <section class="contacts" id="contacts">
-              <h3 class="title">contacts <span class="title__line"></span></h3>
-              <ul class="contacts-list">
-                <li class="contacts-list__item">
-                  <i class="fas fa-phone">
-                    <a
-                      class="contacts-list__phone"
-                      href="tel:375255267412"
-                      title="My phone number"
-                      >+375 25 5267412</a
+            <div class="content-left__inner">
+              <section class="contacts" id="contacts">
+                <h3 class="title">
+                  contacts <span class="title__line"></span>
+                </h3>
+                <ul class="contacts-list">
+                  <li class="contacts-list__item">
+                    <i class="fas fa-phone">
+                      <a
+                        class="contacts-list__phone"
+                        href="tel:375255267412"
+                        title="My phone number"
+                        >+375 25 5267412</a
+                      >
+                    </i>
+                  </li>
+                  <li class="contacts-list__item">
+                    <i class="far fa-envelope"
+                      ><a
+                        class="contacts-list__email"
+                        href="mailto:mikhail.yurkevich.blr@gmail.com"
+                        title="My email"
+                        >mikhail.yurkevich.blr@gmail.com</a
+                      >
+                    </i>
+                  </li>
+                  <li class="contacts-list__item">
+                    <i class="fab fa-telegram-plane">
+                      <a
+                        class="contacts-list__telegram"
+                        href="https://t.me/Mishanya_blr"
+                        title="My telegram"
+                        >Mishanya_blr</a
+                      ></i
                     >
-                  </i>
-                </li>
-                <li class="contacts-list__item">
-                  <i class="far fa-envelope"
-                    ><a
-                      class="contacts-list__email"
-                      href="mailto:mikhail.yurkevich.blr@gmail.com"
-                      title="My email"
-                      >mikhail.yurkevich.blr@gmail.com</a
-                    ></i
-                  >
-                </li>
-                <li class="contacts-list__item">
-                  <i class="fab fa-telegram-plane">
-                    <a
-                      class="contacts-list__telegram"
-                      href="https://t.me/Mishanya_blr"
-                      title="My telegram"
-                      >Mishanya_blr</a
-                    ></i
-                  >
-                </li>
-              </ul>
-            </section>
-            <section class="skills" id="skills">
-              <h3 class="title">skills <span class="title__line"></span></h3>
-              <ul class="skills-list">
-                <li class="skills-list__item">
-                  HTML5, CSS3
-                  <div class="progress">
-                    <span class="progress__line" style="width: 55%"></span>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  Javascript
-                  <div class="progress">
-                    <span class="progress__line" style="width: 30%"></span>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  React JS
-                  <div class="progress">
-                    <span class="progress__line" style="width: 15%"></span>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  Node.JS
-                  <div class="progress">
-                    <span class="progress__line" style="width: 5%"></span>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  Webpack
-                  <div class="progress">
-                    <span class="progress__line" style="width: 5%"></span>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  Git
-                  <div class="progress">
-                    <span class="progress__line" style="width: 15%"></span>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  VC Code, Photoshop, Figma
-                  <div class="progress">
-                    <span class="progress__line" style="width: 30%"></span>
-                  </div>
-                </li>
-                <li class="skills-list__item">
-                  Windows, Linux
-                  <div class="progress">
-                    <span class="progress__line" style="width: 30%"></span>
-                  </div>
-                </li>
-              </ul>
-            </section>
+                  </li>
+                </ul>
+              </section>
+              <section class="skills" id="skills">
+                <h3 class="title">skills <span class="title__line"></span></h3>
+                <ul class="skills-list">
+                  <li class="skills-list__item">
+                    HTML5, CSS3
+                    <div class="progress">
+                      <span class="progress__line" style="width: 55%"></span>
+                    </div>
+                  </li>
+                  <li class="skills-list__item">
+                    Javascript
+                    <div class="progress">
+                      <span class="progress__line" style="width: 30%"></span>
+                    </div>
+                  </li>
+                  <li class="skills-list__item">
+                    React JS
+                    <div class="progress">
+                      <span class="progress__line" style="width: 15%"></span>
+                    </div>
+                  </li>
+                  <li class="skills-list__item">
+                    Node.JS
+                    <div class="progress">
+                      <span class="progress__line" style="width: 5%"></span>
+                    </div>
+                  </li>
+                  <li class="skills-list__item">
+                    Webpack
+                    <div class="progress">
+                      <span class="progress__line" style="width: 5%"></span>
+                    </div>
+                  </li>
+                  <li class="skills-list__item">
+                    Git
+                    <div class="progress">
+                      <span class="progress__line" style="width: 15%"></span>
+                    </div>
+                  </li>
+                  <li class="skills-list__item">
+                    VC Code, Photoshop, Figma
+                    <div class="progress">
+                      <span class="progress__line" style="width: 30%"></span>
+                    </div>
+                  </li>
+                  <li class="skills-list__item">
+                    Windows, Linux
+                    <div class="progress">
+                      <span class="progress__line" style="width: 30%"></span>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </div>
           </div>
           <div class="content-right">
             <h1 class="name">Mikhail<span class="surname">Yurkevich</span></h1>
@@ -198,8 +214,8 @@
                 10 integers (between 0 and 9), that returns a string of those
                 numbers in the form of a phone number.
               </p>
-              <pre class="code__example">
-                
+              <pre>
+                <code class="code__example">
   function createPhoneNumber(numbers) {
     numbers = numbers.join("");
     let firstParth = numbers.substring(0, 3);
@@ -210,8 +226,7 @@
                 
     return result;
   }
-             </pre
-              >
+             </code></pre>
             </section>
             <section class="education" id="education">
               <h3 class="title">Education :</h3>
@@ -260,7 +275,6 @@
             <svg
               class="footer-inner__logo-img"
               id="Layer_1"
-              style="width: 100px; height: 50px"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 552.8 205.3"
@@ -297,5 +311,10 @@
       src="https://kit.fontawesome.com/f44b20260f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

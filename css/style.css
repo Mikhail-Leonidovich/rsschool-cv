@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "EB Garamond", serif;
   font-size: 16px;
@@ -55,6 +59,7 @@ body {
 }
 
 .menu__link {
+  padding: 0;
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
@@ -75,12 +80,13 @@ body {
 .content-left {
   display: flex;
   flex-direction: column;
-  min-width: 370px;
+  min-width: 360px;
   min-height: auto;
 }
 
-.content-left__photo {
-  max-width: 100%;
+.content-left__inner {
+  height: 100%;
+  background-color: #2d304b;
 }
 
 .content-left__contacts {
@@ -92,6 +98,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding-top: 18px;
   text-transform: uppercase;
   font-size: 18px;
 }
@@ -155,7 +163,6 @@ body {
 }
 
 .skills {
-  height: 100%;
   padding-left: 40px;
   color: #ffffff;
   background-color: #2d304b;
@@ -181,10 +188,10 @@ body {
 }
 
 .progress {
+  position: relative;
   margin-top: 5px;
   width: 80%;
   height: 10px;
-  position: relative;
   background: #555555;
   padding: 2px;
   border-radius: 25px;
@@ -211,7 +218,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  padding-left: 60px;
+  padding-left: 40px;
 }
 
 .name {
@@ -255,13 +262,22 @@ body {
 }
 
 .work__link {
+  padding-top: 10px;
   text-decoration: none;
   color: #2d304b;
 }
 
 .work__link:hover {
-  transform: scale(1.2);
   text-decoration: underline;
+}
+
+.work__img {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.work__description {
+  text-align: justify;
 }
 
 .code__text {
@@ -271,8 +287,7 @@ body {
 }
 
 .code__example {
-  background-color: #2d304b;
-  color: #ffffff;
+  white-space: pre-wrap;
 }
 
 .education__item {
@@ -319,6 +334,128 @@ body {
   font-size: 18px;
 }
 
+.footer-inner__logo-img {
+  width: 100px;
+  height: 50px;
+}
+
 .footer-inner__logo-img path {
   fill: #ffffff;
+}
+
+/* ===============
+     Adaptive 
+=============== */
+
+@media (max-width: 1024px) {
+  .menu__item {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .menu__link {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .content-left {
+    min-width: 300px;
+  }
+
+  .contacts,
+  .skills {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .content-right {
+    padding-left: 20px;
+  }
+
+  .name {
+    font-size: 52px;
+  }
+
+  .about__text,
+  .work__link,
+  .work__description,
+  .code__text,
+  .education__item,
+  .languages__item {
+    font-size: 16px;
+  }
+
+  .fa-github {
+    font-size: 30px;
+  }
+
+  .footer-inner__logo-img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 950px) {
+  .menu {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .name,
+  .description {
+    text-align: center;
+  }
+
+  .content-left {
+    padding-left: 20px;
+  }
+
+  .content-left__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .content-left__photo {
+    display: none;
+  }
+
+  .work__list {
+    padding-left: 20px;
+  }
+
+  .code__example {
+    font-size: 14px;
+  }
+
+  .progress {
+    width: 90%;
+  }
+}
+
+@media (max-width: 370px) {
+  .name {
+    font-size: 40px;
+  }
+
+  .content-left,
+  .content-right {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 200px;
+  }
+
+  .contacts,
+  .skills {
+    padding-left: 5px;
+  }
+
+  .skills-list__item {
+    width: 250px;
+  }
 }

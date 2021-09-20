@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "EB Garamond", serif;
   font-size: 16px;
@@ -184,10 +188,10 @@ body {
 }
 
 .progress {
+  position: relative;
   margin-top: 5px;
   width: 80%;
   height: 10px;
-  position: relative;
   background: #555555;
   padding: 2px;
   border-radius: 25px;
@@ -258,6 +262,7 @@ body {
 }
 
 .work__link {
+  padding-top: 10px;
   text-decoration: none;
   color: #2d304b;
 }
@@ -266,10 +271,23 @@ body {
   text-decoration: underline;
 }
 
+.work__img {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.work__description {
+  text-align: justify;
+}
+
 .code__text {
   text-align: justify;
   font-size: 18px;
   font-weight: 500;
+}
+
+.code__example {
+  white-space: pre-wrap;
 }
 
 .education__item {
@@ -350,6 +368,7 @@ body {
   .contacts,
   .skills {
     padding-left: 20px;
+    padding-bottom: 20px;
   }
 
   .content-right {
@@ -362,6 +381,7 @@ body {
 
   .about__text,
   .work__link,
+  .work__description,
   .code__text,
   .education__item,
   .languages__item {
@@ -378,8 +398,17 @@ body {
 }
 
 @media (max-width: 950px) {
+  .menu {
+    display: none;
+  }
+
   .content {
     flex-direction: column-reverse;
+  }
+
+  .name,
+  .description {
+    text-align: center;
   }
 
   .content-left {
@@ -396,9 +425,37 @@ body {
     display: none;
   }
 
-  .contacts {
+  .work__list {
+    padding-left: 20px;
   }
 
+  .code__example {
+    font-size: 14px;
+  }
+
+  .progress {
+    width: 90%;
+  }
+}
+
+@media (max-width: 370px) {
+  .name {
+    font-size: 40px;
+  }
+
+  .content-left,
+  .content-right {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 200px;
+  }
+
+  .contacts,
   .skills {
+    padding-left: 5px;
+  }
+
+  .skills-list__item {
+    width: 250px;
   }
 }

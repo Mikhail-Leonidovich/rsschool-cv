@@ -23,10 +23,21 @@
 
   <body>
     <!-- Burger -->
-    <div class="burger-menu burger-menu--active">
-      <a href="" class="burger-menu__btn">
+    <div class="burger-menu">
+      <a href="#" class="burger-menu__btn">
         <span class="burger-menu__line"></span>
       </a>
+      <nav class="burger-menu__nav">
+        <a class="burger-menu__link" href="#about">About me</a>
+        <a class="burger-menu__link" href="#work">Work experience</a>
+        <a class="burger-menu__link" href="#code">Code example</a>
+        <a class="burger-menu__link" href="#education">Education</a>
+        <a class="burger-menu__link" href="#languages">Languages</a>
+        <a class="burger-menu__link" href="#contacts">Contacts</a>
+        <a class="burger-menu__link" href="#skills">Skills</a>
+      </nav>
+
+      <div class="burger-menu__overlay"></div>
     </div>
     <!-- /Burger -->
     <!-- Header -->
@@ -65,7 +76,7 @@
     <main class="main">
       <div class="container">
         <div class="content">
-          <div class="content-left">
+          <aside class="content-left">
             <img
               class="content-left__photo"
               src="..//rsschool-cv/images/My_photo.png"
@@ -163,7 +174,7 @@
                 </ul>
               </section>
             </div>
-          </div>
+          </aside>
           <div class="content-right">
             <h1 class="name">Mikhail<span class="surname">Yurkevich</span></h1>
             <h2 class="description">Junior front-end developer</h2>
@@ -195,15 +206,43 @@
                   <a
                     class="work__link"
                     href="http://misha.raz.by/free-landing/index.html"
-                    >Free-landing</a
-                  >
+                    target="_blank"
+                    >Free-landing
+                    <img
+                      class="work__img"
+                      src="../rsschool-cv/images/work_example/Free_landing.jpg"
+                      alt="Free-landing"
+                    />
+                  </a>
+                  <p class="work__description">
+                    Layout of a site advertising the installation of solar
+                    panels. Contains information and a form for submitting an
+                    application. <br />
+                    That layout have the technologies such as: Slick slider in
+                    jQuery / HTML / CSS / PHP
+                  </p>
+                  <hr class="line" />
                 </li>
                 <li class="work__item">
                   <a
                     class="work__link"
                     href="http://misha.raz.by/toDo/index.html#"
-                    >ToDo in js</a
-                  >
+                    target="_blank"
+                    >ToDo in js
+                    <img
+                      class="work__img"
+                      src="../rsschool-cv/images/work_example/ToDo.jpg"
+                      alt="ToDo"
+                    />
+                  </a>
+                  <p class="work__description">
+                    The app allows you to make a list of things to do. There is
+                    an opportunity to add, delete, mark as completed, filter by
+                    unfulfilled, search for the necessary tasks.
+                    <br />
+                    That apps have the technologies such as: slick slider in
+                    HTML / CSS / JS
+                  </p>
                 </li>
               </ul>
             </section>
@@ -214,18 +253,18 @@
                 10 integers (between 0 and 9), that returns a string of those
                 numbers in the form of a phone number.
               </p>
-              <pre>
-                <code class="code__example">
-  function createPhoneNumber(numbers) {
-    numbers = numbers.join("");
-    let firstParth = numbers.substring(0, 3);
-    let secondParth = numbers.substring(3, 6);
-    let thirdParth = numbers.substring(6, 10);
+              <pre class="code__example">
+                <code>
+function createPhoneNumber(numbers) {
+  numbers = numbers.join("");
+  let firstParth = numbers.substring(0, 3);
+  let secondParth = numbers.substring(3, 6);
+  let thirdParth = numbers.substring(6, 10);
                 
-    let result = `(${firstParth}) ${secondParth}-${thirdParth}`;
+  let result = `(${firstParth}) ${secondParth}-${thirdParth}`;
                 
-    return result;
-  }
+  return result;
+}
              </code></pre>
             </section>
             <section class="education" id="education">
@@ -312,9 +351,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
-
     <script>
       hljs.highlightAll();
     </script>
+    <script src="../rsschool-cv/js/burger-menu.js"></script>
   </body>
 </html>
